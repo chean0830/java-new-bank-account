@@ -1,18 +1,98 @@
-## Getting Started
+# Java Bank Account
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+콘솔 기반 Bank Account 프로젝트입니다.
 
-## Folder Structure
+사용자는 계좌에 입금, 출금, 송금을 할 수 있으며 거래 내역을 확인할 수 있습니다.
 
-The workspace contains two folders by default, where:
+## 주요 기능
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+* 잔액 조회
+* 입금
+* 출금
+* 송금
+* 거래 내역 조회
+* 프로그램 종료
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 프로젝트 구조
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Account
 
-## Dependency Management
+계좌 정보를 관리하는 클래스입니다.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+* 잔액 조회
+* 입금 처리
+* 출금 처리
+* 송금 처리
+
+### TransactionManager
+
+거래 내역을 관리하는 클래스입니다.
+
+* 거래 내역 저장
+* 거래 내역 조회
+
+### View
+
+사용자에게 화면을 출력하는 클래스입니다.
+
+* 메인 화면 출력
+* 거래 내역 화면 출력
+
+### Controller
+
+사용자의 요청을 처리하는 클래스입니다.
+
+* 입금 처리
+* 출금 처리
+* 송금 처리
+* 거래 내역 조회
+
+### CommandHandler
+
+사용자가 입력한 명령어를 해석하고 Controller에 전달합니다.
+
+### BankAccountApp
+
+프로그램 실행을 담당하는 메인 클래스입니다.
+
+## 사용 기술
+
+* Java
+* ArrayList
+* MVC Pattern
+* Exception Handling
+* Scanner
+
+## 실행 예시
+
+```bash
+save 10000
+take 3000
+send kim 2000
+history
+exit
+```
+
+## 예외 처리
+
+다음과 같은 상황을 예외 처리합니다.
+
+* 음수 금액 입금
+* 음수 금액 출금
+* 음수 금액 송금
+* 잔액 부족
+* 잘못된 명령어 입력
+
+## 학습 내용
+
+이번 프로젝트를 통해 다음 내용을 학습했습니다.
+
+* MVC 패턴 구조 이해
+* 객체 간 역할 분리
+* 단일 책임 원칙(SRP)
+* 예외 처리
+* 컬렉션(ArrayList) 활용
+* 콘솔 기반 프로그램 설계
+
+```
+```
